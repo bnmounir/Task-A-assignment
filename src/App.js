@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import MainData from './MainData';
+import ScoreBoard from './ScoreBoard';
+import Batters from './Batters';
+import Pitchers from './Pitchers';
+import Fielding from './Fielding';
+import Officials from './Officials';
+
+import RawData from './data.json';
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className='App'>
+            <MainData />
+            <ScoreBoard RawData={RawData} />
+            <Batters RawData={RawData} />
+            <Pitchers RawData={RawData} />
+            <Fielding RawData={RawData} />
+            <Officials RawData={RawData} />
+        </div>
+    );
 }
 
 export default App;
